@@ -7,6 +7,9 @@
 //
 
 #import "AppDelegate.h"
+#import "CampaignsViewController.h"
+#import "ProfileViewController.h"
+#import "CameraViewController.h"
 
 @implementation AppDelegate
 
@@ -18,7 +21,15 @@
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
-    self.window.backgroundColor = [UIColor whiteColor];
+    UITabBarController *tabBarController = [[UITabBarController alloc] init];
+    
+    CampaignsViewController *campaignsController = [[CampaignsViewController alloc] init];
+    ProfileViewController *profileController = [[ProfileViewController alloc] init];
+    CameraViewController *cameraController = [[CameraViewController alloc] init];
+    
+    [tabBarController setViewControllers:@[campaignsController, cameraController, profileController]];
+
+    self.window.rootViewController = tabBarController;
     [self.window makeKeyAndVisible];
     return YES;
 }

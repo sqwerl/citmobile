@@ -24,6 +24,12 @@
 		4668905B16CB74CF008938F8 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4668903A16CB74CF008938F8 /* CoreData.framework */; };
 		4668906316CB74CF008938F8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4668906116CB74CF008938F8 /* InfoPlist.strings */; };
 		4668906616CB74CF008938F8 /* CreateItTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4668906516CB74CF008938F8 /* CreateItTests.m */; };
+		4675F3FE16CBB432001BB8E4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4675F3FD16CBB432001BB8E4 /* ViewController.m */; };
+		4675F40116CBBD99001BB8E4 /* CampaignsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4675F40016CBBD99001BB8E4 /* CampaignsViewController.m */; };
+		4675F40416CBBDB3001BB8E4 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4675F40316CBBDB3001BB8E4 /* ProfileViewController.m */; };
+		4675F40716CBBDE8001BB8E4 /* CameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4675F40616CBBDE8001BB8E4 /* CameraViewController.m */; };
+		4675F40916CBBEF8001BB8E4 /* squarelogoicon.png in Resources */ = {isa = PBXBuildFile; fileRef = 4675F40816CBBEF8001BB8E4 /* squarelogoicon.png */; };
+		4675F40D16CBCAF4001BB8E4 /* createiticon.png in Resources */ = {isa = PBXBuildFile; fileRef = 4675F40C16CBCAF4001BB8E4 /* createiticon.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +64,16 @@
 		4668906216CB74CF008938F8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		4668906416CB74CF008938F8 /* CreateItTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CreateItTests.h; sourceTree = "<group>"; };
 		4668906516CB74CF008938F8 /* CreateItTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CreateItTests.m; sourceTree = "<group>"; };
+		4675F3FC16CBB432001BB8E4 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		4675F3FD16CBB432001BB8E4 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		4675F3FF16CBBD99001BB8E4 /* CampaignsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CampaignsViewController.h; sourceTree = "<group>"; };
+		4675F40016CBBD99001BB8E4 /* CampaignsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CampaignsViewController.m; sourceTree = "<group>"; };
+		4675F40216CBBDB2001BB8E4 /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
+		4675F40316CBBDB3001BB8E4 /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
+		4675F40516CBBDE8001BB8E4 /* CameraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraViewController.h; sourceTree = "<group>"; };
+		4675F40616CBBDE8001BB8E4 /* CameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraViewController.m; sourceTree = "<group>"; };
+		4675F40816CBBEF8001BB8E4 /* squarelogoicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = squarelogoicon.png; path = ../../../../Desktop/squarelogoicon.png; sourceTree = "<group>"; };
+		4675F40C16CBCAF4001BB8E4 /* createiticon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = createiticon.png; path = ../../../../Desktop/createiticon.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +138,14 @@
 			children = (
 				4668904516CB74CF008938F8 /* AppDelegate.h */,
 				4668904616CB74CF008938F8 /* AppDelegate.m */,
+				4675F3FF16CBBD99001BB8E4 /* CampaignsViewController.h */,
+				4675F40016CBBD99001BB8E4 /* CampaignsViewController.m */,
+				4675F3FC16CBB432001BB8E4 /* ViewController.h */,
+				4675F40216CBBDB2001BB8E4 /* ProfileViewController.h */,
+				4675F40316CBBDB3001BB8E4 /* ProfileViewController.m */,
+				4675F40516CBBDE8001BB8E4 /* CameraViewController.h */,
+				4675F40616CBBDE8001BB8E4 /* CameraViewController.m */,
+				4675F3FD16CBB432001BB8E4 /* ViewController.m */,
 				4668904E16CB74CF008938F8 /* CreateIt.xcdatamodeld */,
 				4668903D16CB74CF008938F8 /* Supporting Files */,
 			);
@@ -131,6 +155,8 @@
 		4668903D16CB74CF008938F8 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				4675F40C16CBCAF4001BB8E4 /* createiticon.png */,
+				4675F40816CBBEF8001BB8E4 /* squarelogoicon.png */,
 				4668903E16CB74CF008938F8 /* CreateIt-Info.plist */,
 				4668903F16CB74CF008938F8 /* InfoPlist.strings */,
 				4668904216CB74CF008938F8 /* main.m */,
@@ -236,6 +262,8 @@
 				4668904916CB74CF008938F8 /* Default.png in Resources */,
 				4668904B16CB74CF008938F8 /* Default@2x.png in Resources */,
 				4668904D16CB74CF008938F8 /* Default-568h@2x.png in Resources */,
+				4675F40916CBBEF8001BB8E4 /* squarelogoicon.png in Resources */,
+				4675F40D16CBCAF4001BB8E4 /* createiticon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,6 +301,10 @@
 				4668904316CB74CF008938F8 /* main.m in Sources */,
 				4668904716CB74CF008938F8 /* AppDelegate.m in Sources */,
 				4668905016CB74CF008938F8 /* CreateIt.xcdatamodeld in Sources */,
+				4675F3FE16CBB432001BB8E4 /* ViewController.m in Sources */,
+				4675F40116CBBD99001BB8E4 /* CampaignsViewController.m in Sources */,
+				4675F40416CBBDB3001BB8E4 /* ProfileViewController.m in Sources */,
+				4675F40716CBBDE8001BB8E4 /* CameraViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -447,6 +479,7 @@
 				4668906B16CB74CF008938F8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4668906C16CB74CF008938F8 /* Build configuration list for PBXNativeTarget "CreateItTests" */ = {
 			isa = XCConfigurationList;
@@ -455,6 +488,7 @@
 				4668906E16CB74CF008938F8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
