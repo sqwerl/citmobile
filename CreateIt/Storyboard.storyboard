@@ -36,8 +36,8 @@
                                             <rect key="frame" x="96" y="7" width="128" height="31"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <segments>
-                                                <segment title="list"/>
-                                                <segment title="Second"/>
+                                                <segment title="" image="glyphicons_158_show_lines.png"/>
+                                                <segment title="" image="glyphicons_156_show_thumbnails.png"/>
                                             </segments>
                                         </segmentedControl>
                                         <barButtonItem key="rightBarButtonItem" image="19-gear.png" id="pWq-mo-6uA"/>
@@ -139,7 +139,9 @@
         <image name="19-gear.png" width="18" height="18"/>
         <image name="53-house.png" width="22" height="22"/>
         <image name="createiticon.png" width="30" height="30"/>
+        <image name="glyphicons_156_show_thumbnails.png" width="22" height="14"/>
         <image name="glyphicons_157_show_thumbnails_with_lines.png" width="24" height="15"/>
+        <image name="glyphicons_158_show_lines.png" width="24" height="15"/>
         <image name="glyphicons_370_globe_af.png" width="24" height="24"/>
     </resources>
     <classes>
