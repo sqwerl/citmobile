@@ -246,6 +246,7 @@
 		46CDFB1416EF18D200636B37 /* glyphicons_155_show_big_thumbnails.png in Resources */ = {isa = PBXBuildFile; fileRef = 46CDFB1116EF18D200636B37 /* glyphicons_155_show_big_thumbnails.png */; };
 		46CDFB1516EF18D200636B37 /* glyphicons_156_show_thumbnails.png in Resources */ = {isa = PBXBuildFile; fileRef = 46CDFB1216EF18D200636B37 /* glyphicons_156_show_thumbnails.png */; };
 		46CDFB1616EF18D200636B37 /* glyphicons_158_show_lines.png in Resources */ = {isa = PBXBuildFile; fileRef = 46CDFB1316EF18D200636B37 /* glyphicons_158_show_lines.png */; };
+		46CDFB1816EF1C0100636B37 /* glyphicons_136_cogwheel.png in Resources */ = {isa = PBXBuildFile; fileRef = 46CDFB1716EF1C0000636B37 /* glyphicons_136_cogwheel.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -506,6 +507,7 @@
 		46CDFB1116EF18D200636B37 /* glyphicons_155_show_big_thumbnails.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = glyphicons_155_show_big_thumbnails.png; sourceTree = "<group>"; };
 		46CDFB1216EF18D200636B37 /* glyphicons_156_show_thumbnails.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = glyphicons_156_show_thumbnails.png; sourceTree = "<group>"; };
 		46CDFB1316EF18D200636B37 /* glyphicons_158_show_lines.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = glyphicons_158_show_lines.png; sourceTree = "<group>"; };
+		46CDFB1716EF1C0000636B37 /* glyphicons_136_cogwheel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = glyphicons_136_cogwheel.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -624,6 +626,7 @@
 		46CDF96516EEED6100636B37 /* PNG icons */ = {
 			isa = PBXGroup;
 			children = (
+				46CDFB1716EF1C0000636B37 /* glyphicons_136_cogwheel.png */,
 				46CDFB1116EF18D200636B37 /* glyphicons_155_show_big_thumbnails.png */,
 				46CDFB1216EF18D200636B37 /* glyphicons_156_show_thumbnails.png */,
 				46CDFB1316EF18D200636B37 /* glyphicons_158_show_lines.png */,
@@ -1144,6 +1147,7 @@
 				46CDFB1416EF18D200636B37 /* glyphicons_155_show_big_thumbnails.png in Resources */,
 				46CDFB1516EF18D200636B37 /* glyphicons_156_show_thumbnails.png in Resources */,
 				46CDFB1616EF18D200636B37 /* glyphicons_158_show_lines.png in Resources */,
+				46CDFB1816EF1C0100636B37 /* glyphicons_136_cogwheel.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
