@@ -11,10 +11,12 @@
 
 @interface LoginViewController ()
 - (IBAction)performLogin:(id)sender;
+@property (strong, nonatomic) IBOutlet UIActivityIndicatorView *spinner;
 
 @end
 
 @implementation LoginViewController
+@synthesize spinner;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -38,9 +40,16 @@
 }
 
 - (IBAction)performLogin:(id)sender {
+    [self.spinner startAnimating];
+
     AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
     // The user has initiated a login, so call the openSession method and show the login UX if necessary.
-    [appDelegate openSessionWithAllowLoginUI:YES];
+    [appDelegate openSession];
+}
+
+- (void)loginFailed
+{
+    [self.spinner stopAnimating];
 }
 
 @end

@@ -22,7 +22,9 @@ extern NSString *const FBSessionStateChangedNotification;
 
 - (void)saveContext;
 - (NSURL *)applicationDocumentsDirectory;
-- (BOOL)openSessionWithAllowLoginUI:(BOOL)allowLoginUI;
+- (void)openSession;
+
+- (void)showLoginView;
 
 
 

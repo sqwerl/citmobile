@@ -10,6 +10,14 @@
 #import "CampaignsViewController.h"
 #import "ProfileViewController.h"
 #import "CameraViewController.h"
+#import "MainViewController.h"
+#import "LoginViewController.h"
+
+@interface AppDelegate ()
+@property UIViewController *mainViewController;
+
+
+@end
 
 NSString *const FBSessionStateChangedNotification = @"it.create.CreateIt:FacebookSessionStateChangedNotification";
 @implementation AppDelegate
@@ -22,7 +30,18 @@ NSString *const FBSessionStateChangedNotification = @"it.create.CreateIt:Faceboo
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    
+    [FBProfilePictureView class];
+
+    if (FBSession.activeSession.state == FBSessionStateCreatedTokenLoaded) {
+        // Yes, so just open the session (this won't display any UX).
+        [self openSession];
+    } else {
+        NSLog(@"nosessionfound");
+        // No, display the login page.
+        [self showLoginView];
+    }
+
+
     return YES;
 }
 
@@ -155,23 +174,36 @@ NSString *const FBSessionStateChangedNotification = @"it.create.CreateIt:Faceboo
 }
 
 #pragma mark - Facebook Login
-/*
- * Callback for session changes.
- */
+
+
+
+
 - (void)sessionStateChanged:(FBSession *)session
                       state:(FBSessionState) state
                       error:(NSError *)error
 {
+    UIViewController *topViewController = self.window.rootViewController;
+
     switch (state) {
-        case FBSessionStateOpen:
-            if (!error) {
-                // We have a valid session
-                NSLog(@"User session found");
+        case FBSessionStateOpen: {
+            if ([[topViewController presentedViewController]
+                 isKindOfClass:[LoginViewController class]]) {
+                [topViewController dismissViewControllerAnimated:YES completion:NULL];
             }
+        }
             break;
         case FBSessionStateClosed:
         case FBSessionStateClosedLoginFailed:
+            // Once the user has logged in, we want them to
+            // be looking at the root view.
+            [topViewController dismissViewControllerAnimated:YES completion:NULL];
+
+            if ([[topViewController presentedViewController]
+                 isKindOfClass:[LoginViewController class]]) {
+            }
             [FBSession.activeSession closeAndClearTokenInformation];
+            
+            [self showLoginView];
             break;
         default:
             break;
@@ -179,7 +211,6 @@ NSString *const FBSessionStateChangedNotification = @"it.create.CreateIt:Faceboo
     [[NSNotificationCenter defaultCenter]
      postNotificationName:FBSessionStateChangedNotification
      object:session];
-    
     if (error) {
         UIAlertView *alertView = [[UIAlertView alloc]
                                   initWithTitle:@"Error"
@@ -188,26 +219,26 @@ NSString *const FBSessionStateChangedNotification = @"it.create.CreateIt:Faceboo
                                   cancelButtonTitle:@"OK"
                                   otherButtonTitles:nil];
         [alertView show];
-    }
-    
+    }    
 }
+
 
 /*
  * Opens a Facebook session and optionally shows the login UX.
  */
-- (BOOL)openSessionWithAllowLoginUI:(BOOL)allowLoginUI
+- (void)openSession
 {
-    return [FBSession openActiveSessionWithReadPermissions:nil
-                                              allowLoginUI:allowLoginUI
-                                         completionHandler:^(FBSession *session,
-                                                             FBSessionState state,
-                                                             NSError *error) {
-                                             [self sessionStateChanged:session
-                                                                 state:state
-                                                                 error:error];
-                                         }];
+    NSArray *permissions = [NSArray arrayWithObjects:@"email",nil];
+    [FBSession openActiveSessionWithReadPermissions:permissions
+     
+                                       allowLoginUI:YES
+     
+                                  completionHandler:
+     ^(FBSession *session,
+       FBSessionState state, NSError *error) {
+         [self sessionStateChanged:session state:state error:error];
+     }];
 }
-
 /*
  * If we have a valid session at the time of openURL call, we handle
  * Facebook transitions by passing the url argument to handleOpenURL
@@ -215,9 +246,37 @@ NSString *const FBSessionStateChangedNotification = @"it.create.CreateIt:Faceboo
 - (BOOL)application:(UIApplication *)application
             openURL:(NSURL *)url
   sourceApplication:(NSString *)sourceApplication
-         annotation:(id)annotation {
-    // attempt to extract a token from the url
+         annotation:(id)annotation
+{
     return [FBSession.activeSession handleOpenURL:url];
 }
+
+- (void)showLoginView
+{
+    NSLog(@"showLoginView");
+    [self.window makeKeyAndVisible];
+    
+    UIViewController *topViewController = self.window.rootViewController;
+    UIViewController *presentedViewController = [topViewController presentedViewController];
+    
+    // If the login screen is not already displayed, display it. If the login screen is
+    // displayed, then getting back here means the login in progress did not successfully
+    // complete. In that case, notify the login view so it can update its UI appropriately.
+    if (![presentedViewController isKindOfClass:[LoginViewController class]]) {
+        LoginViewController* loginViewController = [[LoginViewController alloc]
+                                                      initWithNibName:@"LoginViewController"
+                                                      bundle:nil];
+        
+
+        [topViewController presentViewController:loginViewController animated:NO completion:NULL];
+    } else {
+        LoginViewController* loginViewController =
+        (LoginViewController*)presentedViewController;
+        [loginViewController loginFailed];
+    }
+    
+    NSLog(@"loginViewShown");
+}
+
 
 @end

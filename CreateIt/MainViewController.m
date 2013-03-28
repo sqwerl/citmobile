@@ -1,18 +1,19 @@
 //
-//  ViewController.m
+//  MainViewController.m
 //  CreateIt
 //
-//  Created by Larry Cao on 2/13/13.
+//  Created by Larry Cao on 3/28/13.
 //  Copyright (c) 2013 Larry Cao. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "MainViewController.h"
+#import "AppDelegate.h"
 
-@interface ViewController ()
+@interface MainViewController ()
 
 @end
 
-@implementation ViewController
+@implementation MainViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -26,14 +27,14 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor blackColor];
+	// Do any additional setup after loading the view.
+
 }
 
-- (void) loadView
-{
-    CGRect viewRect = [[UIScreen mainScreen] bounds];
-    UIView *view = [[UIView alloc] initWithFrame:viewRect];
-    self.view = view;
+- (void)viewDidAppear:(BOOL)animated {
+    [(AppDelegate *)[[UIApplication sharedApplication] delegate] performSelector:@selector(checkFacebookState) withObject:nil afterDelay:1];
+
+
 }
 
 - (void)didReceiveMemoryWarning
@@ -41,5 +42,7 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+
 
 @end
