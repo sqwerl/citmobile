@@ -4,72 +4,52 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
     <scenes>
-        <!--View Controller - Campaigns-->
-        <scene sceneID="E90-gW-t6P">
-            <objects>
-                <viewController id="k3U-L2-IQQ" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="qx6-qy-FZX">
-                        <rect key="frame" x="0.0" y="20" width="320" height="499"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Campaigns" image="glyphicons_157_show_thumbnails_with_lines.png" id="x5b-Cs-z2i"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="2hG-mJ-Cnp" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-104" y="-291"/>
-        </scene>
-        <!--View Controller - Profile-->
+        <!--Profile View Controller-->
         <scene sceneID="bJf-zH-LpQ">
             <objects>
-                <viewController id="gdL-m1-P0c" sceneMemberID="viewController">
+                <viewController id="gdL-m1-P0c" customClass="ProfileViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dSk-jH-0X6">
-                        <rect key="frame" x="0.0" y="20" width="320" height="499"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9ev-Uy-WQt"/>
-                            <navigationBar contentMode="scaleToFill" barStyle="blackOpaque" translatesAutoresizingMaskIntoConstraints="NO" id="Ir4-3O-HF5">
-                                <items>
-                                    <navigationItem id="gEA-AP-3OQ">
-                                        <nil key="title"/>
-                                        <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="l64-BM-scg">
-                                            <rect key="frame" x="96" y="7" width="128" height="31"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <segments>
-                                                <segment title="" image="glyphicons_158_show_lines.png"/>
-                                                <segment title="" image="glyphicons_156_show_thumbnails.png"/>
-                                            </segments>
-                                        </segmentedControl>
-                                        <barButtonItem key="rightBarButtonItem" image="glyphicons_136_cogwheel.png" id="pWq-mo-6uA"/>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Ir4-3O-HF5" firstAttribute="leading" secondItem="dSk-jH-0X6" secondAttribute="leading" type="default" id="DNe-2x-6qA"/>
-                            <constraint firstItem="Ir4-3O-HF5" firstAttribute="trailing" secondItem="dSk-jH-0X6" secondAttribute="trailing" type="default" id="Sa3-5I-nWR"/>
                             <constraint firstItem="9ev-Uy-WQt" firstAttribute="trailing" secondItem="dSk-jH-0X6" secondAttribute="trailing" type="default" id="UTv-2a-w9P"/>
                             <constraint firstItem="9ev-Uy-WQt" firstAttribute="leading" secondItem="dSk-jH-0X6" secondAttribute="leading" type="default" id="caJ-dG-EKL"/>
-                            <constraint firstItem="9ev-Uy-WQt" firstAttribute="top" secondItem="Ir4-3O-HF5" secondAttribute="bottom" type="default" id="eKP-oh-5WN"/>
+                            <constraint firstItem="9ev-Uy-WQt" firstAttribute="top" secondItem="dSk-jH-0X6" secondAttribute="top" type="default" id="lqn-st-YZ4"/>
                             <constraint firstItem="9ev-Uy-WQt" firstAttribute="bottom" secondItem="dSk-jH-0X6" secondAttribute="bottom" type="default" id="wbC-45-ob1"/>
-                            <constraint firstItem="Ir4-3O-HF5" firstAttribute="top" secondItem="dSk-jH-0X6" secondAttribute="top" type="default" id="ztM-Fu-AyP"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Profile" image="123-id-card.png" id="zBk-1y-PMj"/>
                     <toolbarItems>
                         <barButtonItem title="Item" id="pJb-FW-6J8"/>
                     </toolbarItems>
+                    <navigationItem key="navigationItem" id="1Ku-MA-m0P">
+                        <nil key="title"/>
+                        <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="l64-BM-scg">
+                            <rect key="frame" x="96" y="7" width="128" height="31"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <segments>
+                                <segment title="" image="glyphicons_158_show_lines.png"/>
+                                <segment title="" image="glyphicons_156_show_thumbnails.png"/>
+                            </segments>
+                            <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        </segmentedControl>
+                        <barButtonItem key="rightBarButtonItem" image="19-gear.png" id="pWq-mo-6uA"/>
+                    </navigationItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AUb-cr-s2l" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="481" y="23"/>
+            <point key="canvasLocation" x="691" y="1642"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="BVp-HB-bKl">
             <objects>
                 <tabBarController definesPresentationContext="YES" id="hro-WB-Dqy" sceneMemberID="viewController">
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="blackTranslucent"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="blackOpaque" prompted="NO"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="3mZ-8V-cih">
                         <rect key="frame" x="129" y="330" width="163" height="49"/>
@@ -77,76 +57,121 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="QqD-Wz-kwD" kind="relationship" relationship="viewControllers" id="LQI-EF-6iG"/>
-                        <segue destination="k3U-L2-IQQ" kind="relationship" relationship="viewControllers" id="kqX-nt-M4x"/>
+                        <segue destination="u9u-Vc-OGg" kind="relationship" relationship="viewControllers" id="3Ye-r3-YOP"/>
+                        <segue destination="aQz-pM-E4D" kind="relationship" relationship="viewControllers" id="3no-j4-mxk"/>
                         <segue destination="Wv2-hZ-NJz" kind="relationship" relationship="viewControllers" id="iam-Kh-s47"/>
-                        <segue destination="gdL-m1-P0c" kind="relationship" relationship="viewControllers" id="KSC-Iz-Mb7"/>
-                        <segue destination="EbY-ZF-eeG" kind="relationship" relationship="viewControllers" id="V1N-F0-U9B"/>
+                        <segue destination="ldH-Zm-A8W" kind="relationship" relationship="viewControllers" id="EFG-68-oOv"/>
+                        <segue destination="h6y-X1-9n8" kind="relationship" relationship="viewControllers" id="gk7-EL-A6j"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YOX-fS-Ce2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-560" y="333"/>
+            <point key="canvasLocation" x="-564" y="197"/>
         </scene>
         <!--View Controller - Camera-->
         <scene sceneID="j7v-cQ-W91">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="A3v-Va-6Ua" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="Wv2-hZ-NJz" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Zcg-QG-xFO">
-                        <rect key="frame" x="0.0" y="20" width="320" height="499"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Camera" image="createiticon.png" id="g5l-Mb-m3I"/>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="blackTranslucent"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="blackOpaque" prompted="NO"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="A3v-Va-6Ua" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="38" y="541"/>
+            <point key="canvasLocation" x="158" y="291"/>
         </scene>
-        <!--View Controller - Notifications-->
-        <scene sceneID="WgI-CU-1gL">
+        <!--Navigation Controller - Campaigns-->
+        <scene sceneID="uab-ZH-d4Y">
             <objects>
-                <viewController id="EbY-ZF-eeG" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="z3H-2v-XNs">
-                        <rect key="frame" x="0.0" y="20" width="320" height="499"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Notifications" image="glyphicons_370_globe_af.png" id="yKe-cW-HgE"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="IDF-tC-rBb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <navigationController definesPresentationContext="YES" id="aQz-pM-E4D" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Campaigns" image="glyphicons_157_show_thumbnails_with_lines.png" id="T20-oB-g20"/>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="blackTranslucent"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="blackOpaque" prompted="NO"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="blackOpaque" id="TvG-WS-wmv">
+                        <rect key="frame" x="0.0" y="0.0" width="0.0" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hO5-T4-lmf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="465" y="1217"/>
+            <point key="canvasLocation" x="158" y="-374"/>
         </scene>
-        <!--View Controller - Home-->
-        <scene sceneID="0Ue-uM-faF">
+        <!--Navigation Controller - Profile-->
+        <scene sceneID="FhX-oq-mcU">
             <objects>
-                <viewController id="QqD-Wz-kwD" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Jkv-YI-CCo">
-                        <rect key="frame" x="0.0" y="20" width="320" height="499"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Home" image="53-house.png" id="FFw-Nw-G0g"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="pkS-5d-kKb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <navigationController definesPresentationContext="YES" id="h6y-X1-9n8" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Profile" image="123-id-card.png" id="KOO-Bx-LCK"/>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="blackTranslucent"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="blackOpaque" prompted="NO"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="blackOpaque" id="eFZ-Lz-7Jp">
+                        <rect key="frame" x="0.0" y="0.0" width="0.0" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="gdL-m1-P0c" kind="relationship" relationship="rootViewController" id="xNe-1v-ald"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nPZ-em-Ldz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-383" y="1233"/>
+            <point key="canvasLocation" x="152" y="1642"/>
+        </scene>
+        <!--Navigation Controller - Notifications-->
+        <scene sceneID="KMq-IO-yu3">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="ldH-Zm-A8W" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Notifications" image="glyphicons_340_globe.png" id="5mD-eR-GmK"/>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="blackTranslucent"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="blackOpaque" prompted="NO"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="blackOpaque" id="QtK-kG-8ux">
+                        <rect key="frame" x="0.0" y="0.0" width="0.0" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AZQ-7o-Jfe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="152" y="948"/>
+        </scene>
+        <!--Navigation Controller - Home-->
+        <scene sceneID="b7s-P4-sSv">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="u9u-Vc-OGg" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Home" image="53-house.png" id="0PR-2w-M5x"/>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="blackTranslucent"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="blackOpaque" prompted="NO"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="blackOpaque" id="jf2-re-xER">
+                        <rect key="frame" x="0.0" y="0.0" width="0.0" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="g2H-Ld-3MJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="158" y="-1039"/>
         </scene>
     </scenes>
     <resources>
         <image name="123-id-card.png" width="24" height="17"/>
+        <image name="19-gear.png" width="18" height="18"/>
         <image name="53-house.png" width="22" height="22"/>
         <image name="createiticon.png" width="30" height="30"/>
-        <image name="glyphicons_136_cogwheel.png" width="18" height="18"/>
         <image name="glyphicons_156_show_thumbnails.png" width="22" height="14"/>
         <image name="glyphicons_157_show_thumbnails_with_lines.png" width="24" height="15"/>
         <image name="glyphicons_158_show_lines.png" width="24" height="15"/>
-        <image name="glyphicons_370_globe_af.png" width="24" height="24"/>
+        <image name="glyphicons_340_globe.png" width="24" height="24"/>
     </resources>
     <classes>
         <class className="NSLayoutConstraint" superclassName="NSObject">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="ProfileViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ProfileViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="performLogin:"/>
+            </relationships>
         </class>
     </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
